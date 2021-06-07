@@ -105,6 +105,7 @@ const resolvers = {
       }
       const result = await db.collection("Users").insert(newUser);
       const user = result.ops[0];
+      console.log(user)
       return {
         user,
         token: getToken(user)
